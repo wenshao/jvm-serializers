@@ -22,7 +22,7 @@ public class FastJSONArrayDatabind
   public static void register(TestGroups groups)
   {
     groups.media.add(JavaBuiltIn.mediaTransformer,
-        new GenericSerializer<MediaContent>("json/fastjson_array/databind", MediaContent.class),
+        new GenericSerializer<MediaContent>("json-array/fastjson/databind", MediaContent.class),
             new SerFeatures(
                     SerFormat.JSON,
                     SerGraph.FLAT_TREE,
@@ -38,7 +38,6 @@ public class FastJSONArrayDatabind
     private final Class<T> type;
 
     private int serializerFeatures;
-    private SerializeFilter[] emptyFilters     = new SerializeFilter[0];
 
     public GenericSerializer(String name, Class<T> clazz)
     {
